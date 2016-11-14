@@ -1,8 +1,58 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.vanja.datawarfare.MainActivity" />
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.vanja.datawarfare.MapsActivity"
+        map:cameraBearing="0.0"
+        map:cameraTargetLat="44.808915"
+        map:cameraTargetLng="20.476776"
+        map:cameraTilt="30"
+        map:cameraZoom="17"
+        map:mapType="normal"
+        map:uiCompass="false"
+        map:uiZoomControls="false"
+        map:uiMapToolbar="false"
+        map:uiRotateGestures="true"
+        map:uiScrollGestures="true"
+        map:uiTiltGestures="true"
+        map:uiZoomGestures="true"/>
+
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/circle"
+        android:id="@+id/menuButton"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/circle"
+        android:id="@+id/imageButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true" />
+
+    <ImageButton
+        android:layout_margin="15dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/circle"
+        android:id="@+id/bonusButton"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>
