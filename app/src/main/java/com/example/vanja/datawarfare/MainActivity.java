@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -91,6 +92,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         LatLng homeSweetHome = new LatLng(44.808915, 20.476776);
+
         mMap.addMarker(new MarkerOptions().position(homeSweetHome).title("Home is where the heart is. . ."));
 
         // Add a marker in Sydney and move the camera
