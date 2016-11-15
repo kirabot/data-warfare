@@ -11,7 +11,9 @@ import android.widget.ImageButton;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -76,6 +78,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         try {
             // Customise the styling of the base map using a JSON object defined
             // in a raw resource file.
+            // In this particular project we named it map_style_json.json
             boolean success = mMap.setMapStyle(
                     MapStyleOptions.loadRawResourceStyle(
                             this, R.raw.style_json));
@@ -86,6 +89,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         } catch (Resources.NotFoundException e) {
             Log.e("MapsActivityRaw", "Can't find style.", e);
         }
+
+        LatLng homeSweetHome = new LatLng(44.808915, 20.476776);
+        mMap.addMarker(new MarkerOptions().position(homeSweetHome).title("Home is where the heart is. . ."));
 
         // Add a marker in Sydney and move the camera
 //        LatLng sydney = new LatLng(-34, 151);
