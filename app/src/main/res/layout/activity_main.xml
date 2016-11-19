@@ -14,8 +14,8 @@
         map:cameraBearing="0.0"
         map:cameraTargetLat="44.808915"
         map:cameraTargetLng="20.476776"
-        map:cameraTilt="30"
-        map:cameraZoom="17"
+        map:cameraTilt="27"
+        map:cameraZoom="16"
         map:mapType="normal"
         map:uiCompass="false"
         map:uiZoomControls="false"
@@ -24,7 +24,6 @@
         map:uiScrollGestures="true"
         map:uiTiltGestures="true"
         map:uiZoomGestures="true"/>
-
 
     <ImageButton
         android:layout_margin="15dp"
@@ -36,7 +35,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true" />
 
-
+    <!--Oke, testirao sam sve bez MainActivity-ja i sve radi-->
     <ImageButton
         android:layout_margin="15dp"
         android:layout_width="70dp"
@@ -55,4 +54,8 @@
         android:visibility="gone"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true" />
+
+
 </RelativeLayout>
+
+
