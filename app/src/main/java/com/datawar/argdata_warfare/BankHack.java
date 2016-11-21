@@ -23,7 +23,7 @@ public class BankHack extends Activity {
     private int progressStatus = 0;
     private int decryptingInt = 0;
 
-    //privremeno ide u button
+    // privremeno ide u button
     // bankHacker bh = new bankHacker();
 
     private ProgressBar prg;
@@ -56,7 +56,7 @@ public class BankHack extends Activity {
         View.OnClickListener myListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bankHacker bh = new bankHacker(); // privremen
+                bankHacker bh = new bankHacker(); // privremeno
                 if(true){
 //                    textView.setText("Currently hours: " + bh.hourNow + "\n Mission is active: " + bh.start + "-" + bh.end);
                     progressStatus = 0;
@@ -91,7 +91,7 @@ public class BankHack extends Activity {
                 }
                 else {
                     decryptButton.setEnabled(false);
-                    textView.setText("This mission is currently unavaliable." + bh.hourNow + " TEST PURPOSE " + bh.start + " " + bh.end);
+                    textView.setText("This mission is currently unavailable." + bh.hourNow + " TEST PURPOSE " + bh.start + " " + bh.end);
                 }
             }
         };
@@ -126,7 +126,7 @@ public class BankHack extends Activity {
                                             Toast newMessage = Toast.makeText(getApplicationContext(), "DECRYPTED! Well done, hacker!",Toast.LENGTH_LONG);
                                             newMessage.show();
                                             bankHacker bhr = new bankHacker();
-                                            textView4.setText("Money: " + bhr.reward()+"$");
+                                            textView4.setText("Money: " + "$" + bhr.reward());
                                             decryptedData = true;
                                             finish();
                                         }
@@ -151,7 +151,7 @@ public class BankHack extends Activity {
             }
         };
 
-        View.OnClickListener closee = new View.OnClickListener() {
+        View.OnClickListener close = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
@@ -160,7 +160,7 @@ public class BankHack extends Activity {
 
         startButton.setOnClickListener(myListener);
         decryptButton.setOnClickListener(myLisetner2);
-        close.setOnClickListener(closee);
+        this.close.setOnClickListener(close);
 
         // part for decoding
 

@@ -22,10 +22,10 @@ public class bankHacker {
 
 
     bankHacker(){
-        timeHelper = (int)(r.nextInt(24) + 1);
+        timeHelper = (r.nextInt(24));
         // commented for test purpose
         start = timeHelper;
-        end = timeHelper +1;
+        end = timeHelper++;
         hourNow = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
         // testing for sure
 //        start = hourNow;
@@ -47,6 +47,7 @@ public class bankHacker {
     }
 
     public int reward(){
-        return r.nextInt(10000-1000+1)+1000;
+        return r.nextInt(10000-1000 + 1) + 1000;
     }
+
 }

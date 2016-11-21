@@ -79,7 +79,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         BONUS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TestAlgorith ta = new TestAlgorith();
+                TestAlgorithm ta = new TestAlgorithm();
 
                 ta.createMarkets(mMap);
             }
@@ -164,7 +164,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
             @Override
             public boolean onMarkerClick(Marker marker) {
-                TestAlgorith ta = new TestAlgorith();
+                TestAlgorithm ta = new TestAlgorithm();
                 float[] distance  = new float[2];
                 boolean areWeThereYet = false;
 

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DataWarfare.iml" filepath="$PROJECT_DIR$/DataWarfare.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/data-warfare.iml" filepath="$PROJECT_DIR$/data-warfare.iml" />
     </modules>
   </component>
 </project>

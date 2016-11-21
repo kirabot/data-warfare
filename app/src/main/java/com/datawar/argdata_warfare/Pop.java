@@ -18,13 +18,13 @@ public class Pop extends Activity {
 
         // ovo je kako da uzmemo pixele od velicine ekrana i u
         // odnosu na to definisemo height and width
+
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
         int width = dm.widthPixels;
         int height = dm.heightPixels;
-        getWindow().setLayout((int)(width*.8), (int)(height*.6));
-
+        getWindow().setLayout((int)(width * .8), (int)(height * .6));
     }
 
 }

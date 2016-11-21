@@ -13,19 +13,20 @@ import java.util.Random;
 
 public class DecryptStuff {
     Random r = new Random();
+
     DecryptStuff(){
 
     }
 
     public static boolean isConnected(Context context) {
         Intent intent = context.registerReceiver(null, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
-        int plugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
+        int pluggedIn = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, -1);
 
-        return plugged == BatteryManager.BATTERY_PLUGGED_AC || plugged == BatteryManager.BATTERY_PLUGGED_USB;
+        return pluggedIn == BatteryManager.BATTERY_PLUGGED_AC || pluggedIn == BatteryManager.BATTERY_PLUGGED_USB;
     }
 
     public int howHardIsIt(){
-        int difficulty = r.nextInt(9000-3000+1) + 3000;
+        int difficulty = r.nextInt(9000-3000 + 1) + 3000;
 
         return difficulty;
     }

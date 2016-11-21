@@ -14,7 +14,7 @@ import java.util.Random;
  * Created by Kill-o-bite on 11/16/2016.
  */
 
-public class TestAlgorith{
+public class TestAlgorithm {
 
     private int timeHelper;
     final int start;
@@ -24,11 +24,11 @@ public class TestAlgorith{
     private Random genForNames = new Random();
 
 
-    TestAlgorith(){
-        timeHelper = (int)(genForNames.nextInt(24) + 1);
+    TestAlgorithm(){
+        timeHelper = (genForNames.nextInt(24));
         // commented for test purpose
         start = timeHelper;
-        end = timeHelper +1;
+        end = timeHelper++;
         hourNow = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
     }
     private double[] generatorLatitude(){
@@ -43,35 +43,33 @@ public class TestAlgorith{
 
     private double[] generatorLongitude(){
         Random r = new Random();
-        double[] logitudeHolder = new double[10];
-        for(int i = 0; i < logitudeHolder.length; i++){
-            logitudeHolder[i] = Math.random()*(20.496189-20.360156)+20.360156;
+        double[] longitudeHolder = new double[10];
+        for(int i = 0; i < longitudeHolder.length; i++){
+            longitudeHolder[i] = Math.random() * (20.496189-20.360156) + 20.360156;
         }
-
-        return logitudeHolder;
+        return longitudeHolder;
     }
 
-    public boolean missionAvaliability(){
+    public boolean missionAvaliable(){
         boolean itsTime = false;
-        if(start<= hourNow &&  end >= hourNow) itsTime = true;
+        if(start <= hourNow &&  end >= hourNow) itsTime = true;
         return itsTime;
     }
 
     public void createMarkets(GoogleMap map){
         LatLng missionMarker;
-        double[] x = generatorLatitude();
-        double[] y = generatorLongitude();
+        double[] xCoord = generatorLatitude();
+        double[] yCoord = generatorLongitude();
         MarkerOptions missionLocation;
         for(int i = 0; i < 10; i++){
-            missionMarker = new LatLng(x[i],y[i]);
+            missionMarker = new LatLng(xCoord[i],yCoord[i]);
             missionLocation = new MarkerOptions().position(missionMarker).title(typesOfMissions[genForNames.nextInt(4)]).snippet("Available from " + start + "h to " + end + "h");
             map.addCircle(new CircleOptions().center(missionMarker).radius(100).strokeColor(Color.parseColor("#ffac28")).fillColor(Color.parseColor("#66ffac28")));
-//            http://stackoverflow.com/questions/15852122/hex-transparency-in-colors <- link za opacity boje
 
             map.addMarker(missionLocation);
 
+//          http://stackoverflow.com/questions/15852122/hex-transparency-in-colors <- link za opacity boje
         }
     }
-
 
 }
